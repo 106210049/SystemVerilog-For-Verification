@@ -3,11 +3,12 @@ module string_data_type;
   reg [0:15*8-1]s;
   string s0;
   bit[31:0]b;
+  string s1;
   
   initial begin
     s = "how are you doing";//17chars
     $display("String s = %0s",s);
-    
+    s1="I'm Long";
     s = "Hello World";//11chars
     $display("String s = %0s",s);
     
@@ -18,8 +19,13 @@ module string_data_type;
     $display("String s0 = %0s",s0);
   
     s0 = string'({"Hi, "," ",s});
+//     s0={"Hi, "," ",s};	// Assigning an expression of an integral type to a string requires a cast operation
     $display("String s0 = %0s",s0);
-  
+  	
+    s1="I'm Long";
+    s0={s,", ",s1,", I'm 21 years old"};
+    $display("String s0 = %0s",s0);
+    
     b = 128;
 //     s0=b;	// illegal
 //     s0 = string'(b); // sets 128 to s0
