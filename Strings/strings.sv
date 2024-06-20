@@ -100,6 +100,7 @@ module string_basic_methods;
     $display("s1=%0s s2=%0s difference=%0d",s1,s2,s1.icompare(s2)); //case insensitive
 //     icompare: không phân biệt chữ cái viết hoa hay thường
 //     compare: phân biệt hoa và thường
+//     compare và icompare trả về 0 nếu bằng nhau và -1 nếu không bằng nhau
   end
 endmodule
 //----------------------------------------------------------------------
