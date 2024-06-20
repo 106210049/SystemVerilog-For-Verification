@@ -20,11 +20,13 @@ module string_data_type;
     s0 = string'({"Hi, "," ",s});
     $display("String s0 = %0s",s0);
   
-//      Bug
     b = 128;
-    s0 = string'(b); // sets 128 to s0
-    $display("s0 = %0s \n bit b = %0d",s0,b);
-    $sformat(s0, "%s", b);
+//     s0=b;	// illegal
+//     s0 = string'(b); // sets 128 to s0
+//     $display("s0 = %0s \n bit b = %0d",s0,b);
+//     $sformat(s0, "%s", b);
+//     $display("s0 = %0s \n bit b = %0d",s0,b);
+    s0.itoa(b);
     $display("s0 = %0s \n bit b = %0d",s0,b);
     
     s0="welcome to We_LSI channel,practice at the end of the session \
@@ -33,7 +35,6 @@ All the best";
 
   end
 endmodule
-
 //-------------------------------------------------------
 module string_operator;
   string s1="Hi Everyone";//11
@@ -75,18 +76,19 @@ module string_basic_methods;
   
   initial begin
     $display("s1=%0d",s1.len());
-    s1.putc(2,"char");
+    s1.putc(2,"char");	// Replaces ‘i’th char in string with first char in s
     $display("s1=%0s",s1);
     // s1.putc(2,"char")               //s1=Hiceveryone
 
     $display("s1=%0s=%0d", s1.getc(2), s1.getc(2));
     
     s1="ENGINEERING";
-    $display("s1=%0s",s1.tolower());
-    $display("s1=%0s",s1.toupper());
+    $display("s1=%0s",s1.tolower());	// Returns a string with chars in string converted to lower case. 
+    $display("s1=%0s",s1.toupper());	//  Returns a string with chars in string converted to upper case. 
+
     
-   // s2="ENGINEERING";
-    s2="EZgineering";//A=65 a=97
+   s2="ENGINEERING";
+//     s2="EZgineering";//A=65 a=97
     $display("s1=%0s s2=%0s difference=%0d",s1,s2,s1.compare(s2));
     //(s1-s2)case sensitive(0=equ,neg=s1<s2,pos=s1>s2)
     $display("s1=%0s s2=%0s difference=%0d",s1,s2,s1.icompare(s2)); //case insensitive
