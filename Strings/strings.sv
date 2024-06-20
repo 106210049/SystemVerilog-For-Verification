@@ -41,15 +41,23 @@ module string_operator;
   string s3;
   
   initial begin
-    if(s1==s2)
-         $display("s1=%0s equals to s2=%0s",s1,s2);
-    else $display("s1 is not equals to s2");
+//     if(s1==s2)
+//          $display("s1=%0s equals to s2=%0s",s1,s2);
+//     else $display("s1 is not equals to s2");
 
-    if(s1<s2)//<=,>,>=
-         $display("s1=%0s is less than s2=%0s",s1,s2);
-    else 
-         $display("s1 is not less than s2");
-
+//     if(s1<s2)//<=,>,>=
+//          $display("s1=%0s is less than s2=%0s",s1,s2);
+//     else 
+//          $display("s1 is not less than s2");
+    if(s1==s2)	begin
+      $display("s1=%0s equals to s2=%0s",s1,s2);
+    end
+    else if(s1<s2)	begin
+      $display("s1=%0s is less than s2=%0s",s1,s2);
+    end
+    else	begin
+      $display("s1=%0s is greater than s2=%0s",s1,s2);
+    end
     s3={s1," welcome ",s2}; 
     $display("s3=%0s",s3);
     
