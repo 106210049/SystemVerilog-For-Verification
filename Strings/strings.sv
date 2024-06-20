@@ -150,12 +150,22 @@ initial begin
     name.putc(3,"n");
   $display("name.putc(3,n): %0s",name);
     $display("name.getc(3): %0s",name.getc(3));
-  $display("name.substr(1,3): %s",name.substr(1,3));
+  $display("name.substr(1,3): %s",name.substr(1,3));	//Returns new string that is a substring formed by characters in position I through j of str.
     $display("to uppercase: %0s",name.toupper());
     $display("to lowercase: %0s",name.tolower());
-    comp="Amar";name="Amar";
+    comp="Amar";name="AmaR";
     cname=name.compare(comp)?"Unequal":"Equal";
     i=name.compare(comp);
+  $display("Cname=%0s i=%0d",cname,i);
+  
+  comp="AmaR";name="Amar";
+    cname=name.compare(comp)?"Unequal":"Equal";
+    i=name.compare(comp);
+  $display("Cname=%0s i=%0d",cname,i);
+  
+  	comp="Amar";name="AmaR";
+    cname=name.icompare(comp)?"Unequal":"Equal";
+    i=name.icompare(comp);
   $display("Cname=%0s i=%0d",cname,i);
 end
 endmodule
