@@ -31,6 +31,13 @@ module Queues_example;
     foreach(animal_q[i]) $display("animal_q[%0d] = %s", i, animal_q[i]);
     $display("-----------------------");
     
+    // Example of Shuffle
+    $display("-----------------------");
+    $display("\tqueue before shuffle: %0p",animal_q);
+    animal_q.shuffle();	// shuffle elements in queue
+    $display("\tqueue after shuffle: %0p",animal_q);
+    $display("-----------------------");
+    
     // Example of delete complete queue
     $display("--- Delete complete queue ---");
     animal_q.delete();	// delete all element in this queue
@@ -64,6 +71,7 @@ module Queues_example;
     animal_q.pop_front();	// Get the element of first index and delete this element
     foreach(animal_q[i]) $display("animal_q[%0d] = %s", i, animal_q[i]); // Result of this command is: TIGER, LION
     $display("-----------------------");
+    
   end
   
 endmodule
