@@ -33,9 +33,9 @@ module Queues_example;
     
     // Example of Shuffle
     $display("-----------------------");
-    $display("\tqueue before shuffle: %0p",animal_q);
+    $display("queue before shuffle: %0p",animal_q);
     animal_q.shuffle();	// shuffle elements in queue
-    $display("\tqueue after shuffle: %0p",animal_q);
+    $display("queue after shuffle: %0p",animal_q);
     $display("-----------------------");
     
     // Example of delete complete queue
