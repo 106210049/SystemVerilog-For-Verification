@@ -8,7 +8,7 @@ module classAssignment;
   transaction tr1,tr2;
   initial begin
     
-    tr1.new();
+    tr1=new();
     tr1.data=5;
     tr2=tr1;
     $display("tr1.data= %0h",tr1.data);
