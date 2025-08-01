@@ -2,57 +2,57 @@
 // --------------------Structure example without typedef --------------------
 // Note: Nếu struct không sử dụng typedef đồng nghĩa với việc không thể khai báo nhiều biến struct; chỉ cho phép gán
 //  rồi thay đổi 1 struct thôi
-module struct_example;
-  struct {
-    string name;
-    bit[31:0] salary;
-    integer id;
-  } employee;
+// module struct_example;
+//   struct {
+//     string name;
+//     bit[31:0] salary;
+//     integer id;
+//   } employee;
     
-  initial begin
-    employee.name = "Alex";
-    employee.salary = 'h10000;
-    employee.id     = 'd1234;
-    $display("---------- Struct example ----------");
-    $display("employee: %p", employee);
+//   initial begin
+//     employee.name = "Alex";
+//     employee.salary = 'h10000;
+//     employee.id     = 'd1234;
+//     $display("---------- Struct example ----------");
+//     $display("employee: %p", employee);
     
-    // Accessing individual struct member
-    $display("employee: name = %s, salary = 0x%0h, id = %0d", employee.name, employee.salary, employee.id);
-    $display("------------------------------------");
-  end
-endmodule
+//     // Accessing individual struct member
+//     $display("employee: name = %s, salary = 0x%0h, id = %0d", employee.name, employee.salary, employee.id);
+//     $display("------------------------------------");
+//   end
+// endmodule
 
 // --------------------Structure example with typedef --------------------
 
-module struct_example_with_typedef;
-  typedef struct {
-    string name;
-    bit[31:0] salary;
-    integer id;
-  } employee;
+// module struct_example_with_typedef;
+//   typedef struct {
+//     string name;
+//     bit[31:0] salary;
+//     integer id;
+//   } employee;
     
-  initial begin
-    employee e1, e2;
-    e1.name = "Alex";
-    e1.salary = 'h10000;
-    e1.id     = 'd1234;
-    $display("---------- Structure example with typedef ----------");
-    $display("employee e1: %p", e1);
+//   initial begin
+//     employee e1, e2;
+//     e1.name = "Alex";
+//     e1.salary = 'h10000;
+//     e1.id     = 'd1234;
+//     $display("---------- Structure example with typedef ----------");
+//     $display("employee e1: %p", e1);
     
-    e2.name = "Bob";
-    e2.salary = 'h20000;
-    e2.id     = 'd4321;
-    $display("-------------------------------------------------");
-    $display("employee e2: %p", e2);
-    $display("-------------------------------------------------");
+//     e2.name = "Bob";
+//     e2.salary = 'h20000;
+//     e2.id     = 'd4321;
+//     $display("-------------------------------------------------");
+//     $display("employee e2: %p", e2);
+//     $display("-------------------------------------------------");
     
-    // Accessing individual struct member
-    $display("employee e1: name = %s, salary = 0x%0h, id = %0d", e1.name, e1.salary, e1.id);
-    $display("employee e2: name = %s, salary = 0x%0h, id = %0d", e2.name, e2.salary, e2.id);
-    $display($size(e1));
-    $display("-------------------------------------------------");
-  end
-endmodule
+//     // Accessing individual struct member
+//     $display("employee e1: name = %s, salary = 0x%0h, id = %0d", e1.name, e1.salary, e1.id);
+//     $display("employee e2: name = %s, salary = 0x%0h, id = %0d", e2.name, e2.salary, e2.id);
+//     $display($size(e1));
+//     $display("-------------------------------------------------");
+//   end
+// endmodule
 
 // -------------------- Packed structure Example --------------------
 module packed_struct_example;
@@ -135,7 +135,7 @@ endmodule
 
 module union_example;
   typedef union {
-    int salary;
+    bit[15:0] salary;
     integer id;
   } employee;
     
