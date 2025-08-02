@@ -11,12 +11,14 @@
     $display("animal_farm.size() = ", animal_farm.size());
     $display("animal_farm.num() = ", animal_farm.num());
     foreach (animal_farm[i]) $display("animal_farm[%s] = %0d", i, animal_farm[i]);
-  	$display("====================");
+  	
+    $display("====================");
     //exists(): check if a particular key exists in the array
-    if (animal_farm.exists("human"))
+    if (!animal_farm.exists("human"))
       $display("Humman are not in the animal farm!");
     if (animal_farm.exists("duck"))
       $display("Found %0d ducks!", animal_farm["duck"]);
+
   	$display("====================");
     //first(a): assign the first item to the argument a and return 1
         //if the array isn't empty, otherwise return 0
@@ -26,6 +28,7 @@
       string a;
       if (animal_farm.first(a))
         $display("animal_farm[%s] = %0d is the first item!", a, animal_farm[a]);
+        
     end
   
     //prev(a): assign the index of the previous item to a, return 1. If the previous item exists, otherwise keep a and return 0
