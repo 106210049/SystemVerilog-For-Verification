@@ -1,0 +1,20 @@
+// Example for this keyword with non-static method call with static variable type
+// Code your testbench here
+// or browse Examples
+class transaction;
+  bit [31:0] data;
+  int id;
+  
+  function static assign_val (bit [31:0] data, int id);
+    this.data = data;
+    this.id = id;
+  endfunction
+endclass
+
+module class_example;
+  initial begin
+    transaction tr = new();
+    tr.assign_val(5,1);
+    $display("Value of data = %0h, id = %0h", tr.data, tr.id);
+  end
+endmodule

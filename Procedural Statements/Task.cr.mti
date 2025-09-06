@@ -1,0 +1,22 @@
+{D:/VLSI/My document/DV/SV for Verification/Source code/Procedural Statements/Static_and_Automatic_Tasks.sv} {1 {vlog -work work -sv -stats=none {D:/VLSI/My document/DV/SV for Verification/Source code/Procedural Statements/Static_and_Automatic_Tasks.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Static_and_Automatic_Tasks
+
+Top level modules:
+	Static_and_Automatic_Tasks
+
+} {} {}} {D:/VLSI/My document/DV/SV for Verification/Source code/Procedural Statements/Premature_Task_Return_Example.sv} {1 {vlog -work work -sv -stats=none {D:/VLSI/My document/DV/SV for Verification/Source code/Procedural Statements/Premature_Task_Return_Example.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Premature_Task_Return_Example
+
+Top level modules:
+	Premature_Task_Return_Example
+
+} {} {}} {D:/VLSI/My document/DV/SV for Verification/Source code/Procedural Statements/task_example.sv} {1 {vlog -work work -sv -stats=none {D:\VLSI\My document\DV\SV for Verification\Source code\Procedural Statements\task_example.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module task_example
+
+Top level modules:
+	task_example
+
+} {} {}}
